@@ -5,6 +5,7 @@ import { FormioModule, FormioAppConfig } from 'angular-formio';
 import { FormioGrid } from 'angular-formio/grid';
 import { FormioAuthService, FormioAuthConfig } from 'angular-formio/auth';
 import { FormManagerModule, FormManagerService, FormManagerConfig } from 'angular-formio/manager';
+import { FormioResources } from 'angular-formio/resource';
 import { PrismService } from './Prism.service';
 
 import { AppConfig } from './config';
@@ -60,6 +61,7 @@ import { IndexComponent } from './form/index/index.component';
     PrismService,
     FormioAuthService,
     FormManagerService,
+    FormioResources,
     {provide: FormManagerConfig, useValue: {
       tag: 'common'
     }},

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        {{ service.resource?.data.start | date }} to {{ service.resource?.data.end | date }}
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">{{ service.resource?.data.title }}</h3>
+        <p class="card-text" [innerHTML]="service.resource?.data.description"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Registration</h3>
+      </div>
+      <div class="card-body">
+        <a routerLink="../participant/new" class="btn btn-primary btn-block">Register Now</a>
+      </div>
+    </div>
+  </div>
+</div>

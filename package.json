@@ -11,7 +11,6 @@
     "builddemo": "ng build --base-href /angular-demo/;",
     "deploy": "npm run builddemo; cd dist/demo; git init; git remote add origin git@github.com:formio/angular-demo.git; git checkout -b gh-pages; git add -A; git commit -m 'Update demo application'; git push -f origin gh-pages;"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
@@ -30,7 +29,7 @@
     "jquery": "^3.3.1",
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
-    "rxjs": "^6.0.0",
+    "rxjs": "^6.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -41,7 +40,7 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
-    "codelyzer": "~4.2.1",
+    "codelyzer": "^4.4.4",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
@@ -51,7 +50,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
-    "tslint": "~5.9.1",
+    "tslint": "^5.11.0",
     "typescript": "~2.7.2"
   }
 }

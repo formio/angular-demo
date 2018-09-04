@@ -1,0 +1,8 @@
+<h3>Multiple Languages</h3>
+<p><a href="https://github.com/formio/angular-formio/wiki/Translations" class="btn btn-primary btn-block" target="_blank"><span class="fa fa-book"></span> Read Documentation</a></p>
+<div class="mb-2">
+  <button type="button" class="btn btn-primary mr-2" (click)="changeLanguage('en')">English</button>
+  <button type="button" class="btn btn-primary mr-2" (click)="changeLanguage('sp')">Español</button>
+  <button type="button" class="btn btn-primary" (click)="changeLanguage('ch')">中文</button>
+</div>
+<formio src="{{ config.appUrl }}/example" [language]="language" [options]="options"></formio>

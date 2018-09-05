@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormioModule, FormioAppConfig } from 'angular-formio';
 import { FormioGrid } from 'angular-formio/grid';
 import { FormioAuthService, FormioAuthConfig } from 'angular-formio/auth';
-import { FormManagerModule, FormManagerService, FormManagerConfig } from 'angular-formio/manager';
 import { FormioResources } from 'angular-formio/resource';
 import { PrismService } from './Prism.service';
 
@@ -12,11 +12,6 @@ import { AppConfig } from './config';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
-
-import { FormsModule } from './forms/forms.module';
-import { AuthModule } from './auth/auth.module';
-import { EventModule } from './event/event.module';
-import { IndexComponent } from './form/index/index.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +21,7 @@ import { IndexComponent } from './form/index/index.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormioModule,
     FormioGrid,
     RouterModule.forRoot([
@@ -39,32 +35,26 @@ import { IndexComponent } from './form/index/index.component';
       },
       {
         path: 'forms',
-        loadChildren: () => FormsModule
+        loadChildren: './forms/forms.module#FormsModule'
       },
       {
         path: 'auth',
-        loadChildren: () => AuthModule
+        loadChildren: './auth/auth.module#AuthModule'
       },
       {
         path: 'event',
-        loadChildren: () => EventModule
+        loadChildren: './event/event.module#EventModule'
       },
       {
         path: 'manager',
-        loadChildren: () => FormManagerModule.forChild({
-          formIndex: IndexComponent
-        })
+        loadChildren: './form/form.module#FormModule'
       }
     ])
   ],
   providers: [
     PrismService,
     FormioAuthService,
-    FormManagerService,
     FormioResources,
-    {provide: FormManagerConfig, useValue: {
-      tag: 'common'
-    }},
     {provide: FormioAppConfig, useValue: AppConfig},
     {provide: FormioAuthConfig, useValue: {
       login: {

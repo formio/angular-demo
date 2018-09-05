@@ -2,27 +2,60 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResourceComponent } from './resource/resource.component';
 import { ViewComponent } from './view/view.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FormioModule } from 'angular-formio';
-import { FormioResource, FormioResourceRoutes, FormioResourceConfig, FormioResourceService } from 'angular-formio/resource';
-import { ParticipantModule } from './participant/participant.module';
-
-const eventResourceRoutes: Routes = FormioResourceRoutes({
-    view: ViewComponent,
-    resource: ResourceComponent
-});
-
-eventResourceRoutes[2].children.push({
-    path: 'participant',
-    loadChildren: () => ParticipantModule
-});
+import {
+    FormioResource,
+    FormioResourceConfig,
+    FormioResourceService,
+    FormioResourceIndexComponent,
+    FormioResourceCreateComponent,
+    FormioResourceEditComponent,
+    FormioResourceDeleteComponent
+} from 'angular-formio/resource';
 
 @NgModule({
   imports: [
     CommonModule,
     FormioModule,
     FormioResource,
-    RouterModule.forChild(eventResourceRoutes)
+    RouterModule.forChild([
+        {
+            path: '',
+            component: FormioResourceIndexComponent
+        },
+        {
+            path: 'new',
+            component: FormioResourceCreateComponent
+        },
+        {
+            path: ':id',
+            component: ResourceComponent,
+            children: [
+                {
+                    path: '',
+                    redirectTo: 'view',
+                    pathMatch: 'full'
+                },
+                {
+                    path: 'view',
+                    component: ViewComponent
+                },
+                {
+                    path: 'edit',
+                    component: FormioResourceEditComponent
+                },
+                {
+                    path: 'delete',
+                    component: FormioResourceDeleteComponent
+                },
+                {
+                    path: 'participant',
+                    loadChildren: './participant/participant.module#ParticipantModule'
+                }
+            ]
+        }
+    ])
   ],
   declarations: [ResourceComponent, ViewComponent],
   providers: [

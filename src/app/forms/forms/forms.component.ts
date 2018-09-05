@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormRoutes } from '../forms.module';
+import { FORMS } from '../forms.index';
 
 @Component({
   selector: 'app-forms',
@@ -9,7 +9,7 @@ import { FormRoutes } from '../forms.module';
 export class FormsComponent implements OnInit {
   public forms: any[];
   constructor() {
-    this.forms = FormRoutes[0].children.filter((item: any) => {
+    this.forms = FORMS.filter((item: any) => {
       return !!item.path;
     });
   }

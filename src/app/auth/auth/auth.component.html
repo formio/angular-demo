@@ -2,7 +2,7 @@
 <p>Authentication to your application is provided with the <code>FormioAuthModule</code></p>
 <a href="https://github.com/formio/angular-formio/wiki/User-Authentication" class="btn btn-primary"><span class="fa fa-book"></span> Authentication Documentation</a>
 <div class="row">
-  <div class="col-6 offset-4">
+  <div class="col-6 offset-3">
     <div *ngIf="service.authenticated" class="card bg-light p-3 text-center">
       <h5>You are logged in as {{ service.user.data.email }}</h5>
       <button class="btn btn-primary" (click)="service.logout()"><span class="fa fa-sign-out"></span> Logout</button>

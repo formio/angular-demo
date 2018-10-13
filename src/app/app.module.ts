@@ -13,6 +13,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 
+/**
+ * Import the Custom component CheckMatrix.
+ */
+import './components/CheckMatrix';
+
 @NgModule({
   declarations: [
     AppComponent,

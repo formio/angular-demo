@@ -54,7 +54,7 @@ import './components/CheckMatrix';
         path: 'manager',
         loadChildren: './form/form.module#FormModule'
       }
-    ])
+    ], {useHash: true})
   ],
   providers: [
     PrismService,

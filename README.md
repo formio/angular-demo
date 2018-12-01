@@ -1,6 +1,6 @@
 # Angular + Form.io Demo
 
-This project provides an Angular 6 demonstration with Form.io platform.
+This project provides an Angular 7 demonstration with Form.io platform.
 
 ### Installation
 Type the following to install the demo.

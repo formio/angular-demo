@@ -13,6 +13,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 
+// Make sure we use fontawesome everywhere in Form.io renderers.
+const Formio = require('formiojs').Formio;
+Formio.icons = 'fontawesome';
+
 /**
  * Import the Custom component CheckMatrix.
  */

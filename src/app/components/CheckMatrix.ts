@@ -3,9 +3,10 @@
  *
  * Get the base component class by referencing Formio.Components.components map.
  */
-import BaseComponent from 'formiojs/components/base/Base';
-import TableComponent from 'formiojs/components/table/Table';
-import Components from 'formiojs/components/Components';
+const BaseComponent = require('formiojs/components/base/Base').default;
+const TableComponent = require('formiojs/components/table/Table').default;
+const Components = require('formiojs/components/Components').default
+
 
 /**
  * Create a new CheckMatrixComponent "class" using ES5 class inheritance notation.

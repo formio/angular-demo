@@ -7,8 +7,8 @@ import { PrismService } from '../../Prism.service';
   styleUrls: ['./builder.component.scss']
 })
 export class BuilderComponent implements AfterViewInit {
-  @ViewChild('json') jsonElement?: ElementRef;
-  @ViewChild('code') codeElement?: ElementRef;
+  @ViewChild('json', {static: true}) jsonElement?: ElementRef;
+  @ViewChild('code', {static: true}) codeElement?: ElementRef;
   public form: Object;
   constructor(public prism: PrismService) {
     this.form = {components: []};

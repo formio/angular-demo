@@ -8,7 +8,6 @@ Type the following to install the demo.
 ```
 npm install -g @angular/cli
 npm install
-npm install --save angular-formio
 ```
 
 ### Running the demo

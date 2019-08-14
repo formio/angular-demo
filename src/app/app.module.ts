@@ -20,7 +20,7 @@ Formio.icons = 'fontawesome';
 /**
  * Import the Custom component CheckMatrix.
  */
-import './components/CheckMatrix';
+// import './components/CheckMatrix';
 
 @NgModule({
   declarations: [

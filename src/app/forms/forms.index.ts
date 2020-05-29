@@ -4,6 +4,7 @@ import { SimpleComponent } from './simple/simple.component';
 import { RendererComponent } from './renderer/renderer.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { PdfComponent } from './pdf/pdf.component';
+import {CustomBuilderComponent} from "./custom-builder/builder.component";
 export const FORMS: any = [
   {
     path: '',
@@ -19,6 +20,11 @@ export const FORMS: any = [
     path: 'builder',
     title: 'Form Builder',
     component: BuilderComponent
+  },
+  {
+    path: 'custom-builder',
+    title: 'Custom Builder',
+    component: CustomBuilderComponent
   },
   {
     path: 'simple',

@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormioModule } from 'angular-formio';
 import { BuilderComponent } from './builder/builder.component';
+import {CustomBuilderComponent} from './custom-builder/builder.component';
 import { KitchenComponent } from './kitchen/kitchen.component';
 import { LanguageComponent } from './language/language.component';
 import { PdfComponent } from './pdf/pdf.component';
@@ -23,6 +24,7 @@ import { FORMS } from './forms.index';
     }])
   ],
   declarations: [
+    CustomBuilderComponent,
     BuilderComponent,
     KitchenComponent,
     LanguageComponent,

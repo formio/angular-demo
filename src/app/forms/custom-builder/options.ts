@@ -42,7 +42,7 @@ export const options = {
       }
     }
   },
-  language: 'jp',
+  language: 'en',
   i18n: {
     jp: {
       'Label': 'ラベル',

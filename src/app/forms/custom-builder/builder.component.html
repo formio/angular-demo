@@ -1,84 +1,42 @@
 <div class="row">
   <div class="col-sm-7">
-    <p>The Angular JSON form renderer is a wrapper around the <a href="https://github.com/formio/formio.js">Form.io Core Renderer</a>. This provides the ability to render any Form within the Form.io platform, using the following syntax.</p>
+    <p>The Form.io form builder interface allows you to embed a form builder within your application, which generates a JSON schema of the form created.</p>
+    <p><a href="https://github.com/formio/angular-formio/wiki/Form-Builder" class="btn btn-primary" target="_blank"><span class="fa fa-book"></span> Builder Documentation</a></p>
+    <p>
+      One of the features of builder that user can change different options.
+      For example language. Options can be provided via <code class="language-html">[options]</code> property.
+    </p>
     <div class="card bg-light p-2">
-      <pre><code class="language-html">&lt;formio src="https://examples.com/example"&gt;&lt;/formio&gt;</code></pre>
+      <pre><code class="language-html">&lt;form-builder [form]="form" [options]="options"&gt;&lt;/form-builder></code></pre>
     </div>
-    <p>You can also provide a variable as the source as follows.</p>
+    <p>Options can be look like:</p>
     <div class="card bg-light p-2">
-      <pre><code class="language-html">&lt;formio [src]="formSrc"&gt;&lt;/formio&gt;</code></pre>
-    </div>
-    <p>And even listen for Change and Submit events as follows.</p>
-    <div class="card bg-light p-2">
-      <pre><code class="language-html">&lt;formio
-  [src]="formSrc"
-  (change)="onChange($event)"
-  (submit)="onSubmit($event)"
-&gt;&lt;/formio&gt;</code></pre>
-    </div>
-    <p>Or pass JSON directly</p>
-    <div class="card bg-light p-2">
-      <pre><code class="language-html">&lt;formio [form]="&#123;components: [
-  &#123;
-    type: 'textfield',
-    label: 'FirstName',
-    key: 'firstName',
-    input: true
-  &#125;,
-  &#123;
-    type: 'textfield',
-    label: 'LastName',
-    key: 'lastName',
-    input: true
-  &#125;,
-  &#123;
-    type: 'email',
-    label: 'Email',
-    key: 'email',
-    input: true
-  &#125;,
-  &#123;
-    type: 'button',
-    action: 'Submit',
-    label: 'Submit',
-    theme: 'primary'
+      <pre><code class="language-html">exprort const options = &#123;
+  language: 'en',
+  i18n: &#123;
+    jp: &#123;
+      'Label': 'ラベル',
+      'Label Position': 'ラベルの位置',
+      'Placeholder': 'プレースホルダー',
+      'Description': '説明文'
+    &#125;
   &#125;
-]&#125;"&gt;&lt;/formio&gt;</code></pre>
+&#125;
+      </code></pre>
     </div>
-    <p>and populate with data</p>
+    <p>Also builder can be updated with the new options via
+      <code class="language-html">
+        [rebuild]
+      </code>
+    </p>
     <div class="card bg-light p-2">
-      <pre><code class="language-html">&lt;formio [form]="&#123;components: [
-  &#123;
-    type: 'textfield',
-    label: 'FirstName',
-    key: 'firstName',
-    input: true
-  &#125;,
-  &#123;
-    type: 'textfield',
-    label: 'LastName',
-    key: 'lastName',
-    input: true
-  &#125;,
-  &#123;
-    type: 'email',
-    label: 'Email',
-    key: 'email',
-    input: true
-  &#125;,
-  &#123;
-    type: 'button',
-    action: 'Submit',
-    label: 'Submit',
-    theme: 'primary'
-  &#125;
-]&#125;" [submission]="&#123;
-  data: &#123;
-    firstName: 'Joe',
-    lastName: 'Smith',
-    email: 'joe@example.com'
-  &#125;
-&#125;"&gt;&lt;/formio&gt;</code></pre>
+      <pre><code class="language-html">&lt;form-builder [form]="form" [options]="options" [rebuild]="rebuildEmitter.asObservable()"</code></pre>
+    </div>
+    <p>
+      Rebuid emitter can be Observable and used to set the new options like this:
+    </p>
+    <div class="card bg-light p-2">
+      <pre><code class="language-html">this.rebuildEmitter.next(this.options)</code></pre>
     </div>
   </div>
 </div>

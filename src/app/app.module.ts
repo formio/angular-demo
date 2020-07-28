@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormioModule, FormioAppConfig } from 'angular-formio';
+import { Formio, FormioModule, FormioAppConfig } from 'angular-formio';
+// import premium from '@formio/premium';
+// Formio.use(premium);
 import { FormioGrid } from 'angular-formio/grid';
 import { FormioAuthService, FormioAuthConfig } from 'angular-formio/auth';
 import { FormioResources } from 'angular-formio/resource';
@@ -14,8 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 
 // Make sure we use fontawesome everywhere in Form.io renderers.
-const Formio = require('formiojs').Formio;
-Formio.icons = 'fontawesome';
+(Formio as any).icons = 'fontawesome';
 
 /**
  * Import the Custom component CheckMatrix.

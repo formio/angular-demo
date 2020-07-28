@@ -21,3 +21,7 @@ export class BuilderComponent &#123;
 <div class="well jsonviewer">
   <pre id="json"><code class="language-json" #json></code></pre>
 </div>
+<h3 class="text-center text-muted">As Rendered Form</h3>
+<div class="well jsonviewer">
+  <formio [form]="form" [refresh]="refreshForm"></formio>
+</div>

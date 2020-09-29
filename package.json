@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "angular-formio": "4.5.11",
+    "angular-formio": "4.5.12",
     "bootstrap": "^4.5.0",
     "bootswatch": "^4.5.0",
     "core-js": "^3.6.5",

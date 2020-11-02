@@ -45,19 +45,19 @@ import { DataComponent } from './data/data.component';
       },
       {
         path: 'forms',
-        loadChildren: './forms/forms.module#FormsModule'
+        loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule)
       },
       {
         path: 'auth',
-        loadChildren: './auth/auth.module#AuthModule'
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
       },
       {
         path: 'event',
-        loadChildren: './event/event.module#EventModule'
+        loadChildren: () => import('./event/event.module').then(m => m.EventModule)
       },
       {
         path: 'manager',
-        loadChildren: './form/form.module#FormModule'
+        loadChildren: () => import('./form/form.module').then(m => m.FormModule)
       }
     ], {useHash: true})
   ],

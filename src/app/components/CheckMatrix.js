@@ -3,9 +3,10 @@
  *
  * Get the base component class by referencing Formio.Components.components map.
  */
-import Base from 'formiojs/components/_classes/component/Component';
-import editForm from 'formiojs/components/table/Table.form';
-import Components from 'formiojs/components/Components';
+import { Formio } from 'angular-formio';
+const Base = (Formio as any).Components.components.component;
+const editForm = (Formio as any).Components.components.table.editForm;
+const Components = (Formio as any).Components;
 
 /**
  * Create a new CheckMatrixComponent "class" using ES5 class inheritance notation.

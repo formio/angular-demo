@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "builddemo": "ng build --prod --base-href /angular-demo/;",
-    "deploy": "npm run builddemo; cd dist/demo; git init; git remote add origin git@github.com:formio/angular-demo.git; git checkout -b gh-pages; git add -A; git commit -m 'Update demo application'; git push -f origin gh-pages;"
+    "deploy": "npm run builddemo; cd dist; git init; git remote add origin git@github.com:formio/angular-demo.git; git checkout -b gh-pages; git add -A; git commit -m 'Update demo application'; git push -f origin gh-pages;"
   },
   "dependencies": {
     "@angular/animations": "^11.0.3",

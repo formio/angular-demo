@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormioAppConfig } from 'angular-formio';
+import { FormioAppConfig } from '@formio/angular';
 @Component({
   selector: 'app-pdf',
   templateUrl: './pdf.component.html',

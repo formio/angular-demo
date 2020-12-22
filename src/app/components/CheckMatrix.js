@@ -3,7 +3,7 @@
  *
  * Get the base component class by referencing Formio.Components.components map.
  */
-import { Formio } from 'angular-formio';
+import { Formio } from '@formio/angular';
 const Base = (Formio as any).Components.components.component;
 const editForm = (Formio as any).Components.components.table.editForm;
 const Components = (Formio as any).Components;

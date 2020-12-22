@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewEncapsulation } from '@angular/core';
-import { FormioAppConfig } from 'angular-formio';
-import { FormioAuthService } from 'angular-formio/auth';
+import { FormioAppConfig } from '@formio/angular';
+import { FormioAuthService } from '@formio/angular/auth';
 import { PrismService } from '../Prism.service';
 @Component({
   selector: 'app-data',

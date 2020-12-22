@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
-import { FormioOptions, FormioAppConfig } from 'angular-formio';
+import { FormioOptions, FormioAppConfig } from '@formio/angular';
 
 @Component({
   selector: 'app-language',

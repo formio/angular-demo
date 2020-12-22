@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormioResourceComponent } from 'angular-formio/resource';
+import { FormioResourceComponent } from '@formio/angular/resource';
 
 @Component({
   selector: 'app-resource',

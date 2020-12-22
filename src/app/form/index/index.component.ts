@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormManagerIndexComponent, FormManagerService, FormManagerConfig } from 'angular-formio/manager';
-import { FormioAuthService } from 'angular-formio/auth';
+import { FormManagerIndexComponent, FormManagerService, FormManagerConfig } from '@formio/angular/manager';
+import { FormioAuthService } from '@formio/angular/auth';
 
 @Component({
   selector: 'app-index',

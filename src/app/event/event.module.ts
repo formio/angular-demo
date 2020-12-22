@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ResourceComponent } from './resource/resource.component';
 import { ViewComponent } from './view/view.component';
 import { RouterModule } from '@angular/router';
-import { FormioModule } from 'angular-formio';
+import { FormioModule } from '@formio/angular';
 import {
     FormioResource,
     FormioResourceConfig,
@@ -12,7 +12,7 @@ import {
     FormioResourceCreateComponent,
     FormioResourceEditComponent,
     FormioResourceDeleteComponent
-} from 'angular-formio/resource';
+} from '@formio/angular/resource';
 
 @NgModule({
   imports: [

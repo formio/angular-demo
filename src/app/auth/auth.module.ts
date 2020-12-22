@@ -3,8 +3,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './login/login.component';
-import { FormioModule } from 'angular-formio';
-import { FormioAuth, FormioAuthRoutes } from 'angular-formio/auth';
+import { FormioModule } from '@formio/angular';
+import { FormioAuth, FormioAuthRoutes } from '@formio/angular/auth';
 
 export const authRoutes = FormioAuthRoutes({
   auth: AuthComponent,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormioModule } from 'angular-formio';
+import { FormioModule } from '@formio/angular';
 import { BuilderComponent } from './builder/builder.component';
 import {CustomBuilderComponent} from './custom-builder/builder.component';
 import { KitchenComponent } from './kitchen/kitchen.component';

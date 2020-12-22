@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Formio, FormioModule, FormioAppConfig } from 'angular-formio';
+import { Formio, FormioModule, FormioAppConfig } from '@formio/angular';
 // import premium from '@formio/premium';
 // Formio.use(premium);
-import { FormioGrid } from 'angular-formio/grid';
-import { FormioAuthService, FormioAuthConfig } from 'angular-formio/auth';
-import { FormioResources } from 'angular-formio/resource';
+import { FormioGrid } from '@formio/angular/grid';
+import { FormioAuthService, FormioAuthConfig } from '@formio/angular/auth';
+import { FormioResources } from '@formio/angular/resource';
 import { PrismService } from './Prism.service';
 
 import { AppConfig } from './config';

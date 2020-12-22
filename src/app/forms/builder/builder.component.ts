@@ -1,4 +1,4 @@
-import { FormioRefreshValue } from 'angular-formio';
+import { FormioRefreshValue } from '@formio/angular';
 import { Component, AfterViewInit, ViewChild, ElementRef, EventEmitter } from '@angular/core';
 import { PrismService } from '../../Prism.service';
 

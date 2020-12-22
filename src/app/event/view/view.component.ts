@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormioResourceViewComponent } from 'angular-formio/resource';
+import { FormioResourceViewComponent } from '@formio/angular/resource';
 
 @Component({
   selector: 'app-view',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormioAuthLoginComponent, FormioAuthService } from 'angular-formio/auth';
+import { FormioAuthLoginComponent, FormioAuthService } from '@formio/angular/auth';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormioModule } from 'angular-formio';
+import { FormioModule } from '@formio/angular';
 import {
   FormioResource,
   FormioResourceRoutes,
   FormioResourceConfig,
   FormioResourceService
-} from 'angular-formio/resource';
+} from '@formio/angular/resource';
 
 @NgModule({
   imports: [

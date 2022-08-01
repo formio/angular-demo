@@ -51,7 +51,7 @@ import {
                 },
                 {
                     path: 'participant',
-                    loadChildren: './participant/participant.module#ParticipantModule'
+                    loadChildren: () => import('./participant/participant.module').then(x => x.ParticipantModule)
                 }
             ]
         }

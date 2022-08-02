@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "builddemo": "ng build --prod --base-href /angular-demo/;",
+    "buildprod": "ng build --configuration production",
+    "builddemo": "ng build --configuration production --base-href /angular-demo/;",
     "deploy": "npm run builddemo; cd dist; git init; git remote add origin git@github.com:formio/angular-demo.git; git checkout -b gh-pages; git add -A; git commit -m 'Update demo application'; git push -f origin gh-pages;"
   },
   "dependencies": {

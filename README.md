@@ -16,7 +16,12 @@ Type the following to run the demo.
 ```
 ng serve
 ```
+### Running the e2e 
+Type the following to run the e2e cypress test on open mode 
 
+```
+ng e2e
+```
 ### Live Demonstration
 
 To see a live demonstration, go to [https://formio.github.io/angular-demo/](https://formio.github.io/angular-demo/)

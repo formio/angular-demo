@@ -1,7 +1,9 @@
 import { Component, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { FormioAppConfig } from '@formio/angular';
 import { FormioAuthService } from '@formio/angular/auth';
+import SubmissionComponents from './submission/index';
 import { PrismService } from '../Prism.service';
+
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
@@ -9,6 +11,9 @@ import { PrismService } from '../Prism.service';
   encapsulation: ViewEncapsulation.None
 })
 export class DataComponent implements AfterViewInit {
+  
+  public components = SubmissionComponents;
+  
   constructor(
       public auth: FormioAuthService,
       public config: FormioAppConfig,

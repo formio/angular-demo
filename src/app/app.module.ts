@@ -14,6 +14,7 @@ import { AppConfig } from './config';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
+import { CustomSubmissionGridHeaderComponent } from './data/submission/SubmissionGridHeader.component';
 
 // Make sure we use fontawesome everywhere in Form.io renderers.
 (Formio as any).icons = 'fontawesome';
@@ -27,7 +28,8 @@ import { DataComponent } from './data/data.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    DataComponent
+    DataComponent,
+    CustomSubmissionGridHeaderComponent
   ],
   imports: [
     BrowserModule,

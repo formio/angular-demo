@@ -2,17 +2,14 @@
 
 This project provides an Angular demonstration with Form.io platform.
 
-### Installation
-Type the following to install the demo.
+## Angular Versions
+This application has support for multiple versions of Angular. 
 
-```
-npm install -g @angular/cli
-npm install
-```
-Incase of error while running npm install use below command
-```
-npm install --save --legacy-peer-deps
-```
+### Angular 17
+This is the "master" branch of this application, but is also tagged with v7.0.0+ version
+
+### Angular 16
+This is pushed to the "6.0.x" branch of this application, but is also tagged with v6.0.0+ version.
 
 ### Running the demo
 Type the following to run the demo.

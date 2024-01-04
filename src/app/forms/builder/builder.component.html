@@ -4,12 +4,12 @@
 <strong>builder.html</strong>
 <pre class="text-center"><code class="language-markup">&lt;form-builder [form]="form" (change)="onChange($event)"&gt;&lt;/form-builder&gt;</code></pre>
 <strong>builder.ts</strong>
-<pre><code class="language-javascript">import &#123; Component, ElementRef, ViewChild &#125; from '@angular/core';
-@Component(&#123;
+<pre><code class="language-javascript">import &#123; Component, ElementRef, ViewChild &#125; from '&#64;angular/core';
+&#64;Component(&#123;
   template: require('./builder.html')
 &#125;)
 export class BuilderComponent &#123;
-  @ViewChild('json') jsonElement?: ElementRef;
+  &#64;ViewChild('json') jsonElement?: ElementRef;
   public form: Object = &#123;components: []&#125;;
   onChange(event) &#123;
     console.log(event.form);

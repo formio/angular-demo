@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import bootstrap4 from '@formio/bootstrap/bootstrap4';
 import { Formio, FormioModule, FormioAppConfig } from '@formio/angular';
 // import premium from '@formio/premium';
 // Formio.use(premium);
@@ -19,7 +18,6 @@ import { CustomSubmissionGridHeaderComponent } from './data/submission/Submissio
 
 // Make sure we use fontawesome everywhere in Form.io renderers.
 (Formio as any).icons = 'fontawesome';
-(Formio as any).use(bootstrap4);
 
 /**
  * Import the Custom component CheckMatrix.

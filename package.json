@@ -1,5 +1,5 @@
 {
-  "name": "formio-angular-demo",
+  "name": "@formio/formio-angular-demo",
   "version": "7.0.0",
   "scripts": {
     "ng": "ng",

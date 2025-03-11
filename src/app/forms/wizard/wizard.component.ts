@@ -3,9 +3,10 @@ import { FormioAppConfig } from '@formio/angular';
 import { PrismService } from '../../Prism.service';
 
 @Component({
-  selector: 'app-wizard',
-  templateUrl: './wizard.component.html',
-  styleUrls: ['./wizard.component.scss']
+    selector: 'app-wizard',
+    templateUrl: './wizard.component.html',
+    styleUrls: ['./wizard.component.scss'],
+    standalone: false
 })
 export class WizardComponent implements AfterViewInit {
   constructor(

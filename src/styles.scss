@@ -1,5 +1,4 @@
-@import "bootswatch/dist/cosmo/_variables.scss";
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootswatch/dist/cosmo/_bootswatch.scss";
+@forward "bootswatch/dist/cosmo/_variables";
+@use "bootstrap/scss/bootstrap";
 $fa-font-path: '~font-awesome/fonts';
-@import 'font-awesome/scss/font-awesome';
+@forward 'font-awesome/scss/font-awesome';

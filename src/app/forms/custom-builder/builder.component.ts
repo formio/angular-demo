@@ -4,8 +4,9 @@ import { options } from './options';
 import {Observable, Subject} from "rxjs";
 
 @Component({
-  selector: 'app-builder',
-  templateUrl: './builder.component.html',
+    selector: 'app-builder',
+    templateUrl: './builder.component.html',
+    standalone: false
 })
 export class CustomBuilderComponent implements AfterViewInit {
   @ViewChild('json', {static: true}) jsonElement?: ElementRef;

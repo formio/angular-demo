@@ -3,9 +3,10 @@ import { FormioAppConfig } from '@formio/angular';
 import { PrismService } from '../../Prism.service';
 
 @Component({
-  selector: 'app-simple',
-  templateUrl: './simple.component.html',
-  styleUrls: ['./simple.component.scss']
+    selector: 'app-simple',
+    templateUrl: './simple.component.html',
+    styleUrls: ['./simple.component.scss'],
+    standalone: false
 })
 export class SimpleComponent implements AfterViewInit {
   constructor(

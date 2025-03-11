@@ -3,9 +3,10 @@ import { Component, AfterViewInit, ViewChild, ElementRef, EventEmitter } from '@
 import { PrismService } from '../../Prism.service';
 
 @Component({
-  selector: 'app-builder',
-  templateUrl: './builder.component.html',
-  styleUrls: ['./builder.component.scss']
+    selector: 'app-builder',
+    templateUrl: './builder.component.html',
+    styleUrls: ['./builder.component.scss'],
+    standalone: false
 })
 export class BuilderComponent implements AfterViewInit {
   @ViewChild('json', {static: true}) jsonElement?: ElementRef;

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FORM } from './form';
 @Component({
-  selector: 'app-kitchen',
-  templateUrl: './kitchen.component.html',
-  styleUrls: ['./kitchen.component.scss']
+    selector: 'app-kitchen',
+    templateUrl: './kitchen.component.html',
+    styleUrls: ['./kitchen.component.scss'],
+    standalone: false
 })
 export class KitchenComponent {
   public form: any = FORM;

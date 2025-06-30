@@ -8,8 +8,8 @@ describe('RendererComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RendererComponent ]
-    })
+    imports: [RendererComponent]
+})
     .compileComponents();
   }));
 

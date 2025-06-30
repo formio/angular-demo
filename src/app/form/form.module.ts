@@ -6,22 +6,20 @@ import { FormManagerModule, FormManagerRoutes, FormManagerService, FormManagerCo
 import { IndexComponent } from './index/index.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormioGrid,
-    FormManagerModule,
-    RouterModule.forChild(FormManagerRoutes({
-      formIndex: IndexComponent
-    }))
-  ],
-  declarations: [
-    IndexComponent
-  ],
-  providers: [
-    FormManagerService,
-    {provide: FormManagerConfig, useValue: {
-      tag: 'common'
-    }}
-  ]
+    imports: [
+        CommonModule,
+        FormioGrid,
+        FormManagerModule,
+        RouterModule.forChild(FormManagerRoutes({
+            formIndex: IndexComponent
+        })),
+        IndexComponent
+    ],
+    providers: [
+        FormManagerService,
+        { provide: FormManagerConfig, useValue: {
+                tag: 'common'
+            } }
+    ]
 })
 export class FormModule { }

@@ -12,12 +12,12 @@ export const authRoutes = FormioAuthRoutes({
 });
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormioModule,
-    FormioAuth,
-    RouterModule.forChild(authRoutes)
-  ],
-  declarations: [AuthComponent, LoginComponent]
+    imports: [
+        CommonModule,
+        FormioModule,
+        FormioAuth,
+        RouterModule.forChild(authRoutes),
+        AuthComponent, LoginComponent
+    ]
 })
 export class AuthModule { }

@@ -2,11 +2,12 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { PrismService } from '../../Prism.service';
 import { options } from './options';
 import {Observable, Subject} from "rxjs";
+import { FormBuilderComponent } from '@formio/angular';
 
 @Component({
     selector: 'app-builder',
     templateUrl: './builder.component.html',
-    standalone: false
+    imports: [FormBuilderComponent]
 })
 export class CustomBuilderComponent implements AfterViewInit {
   @ViewChild('json', {static: true}) jsonElement?: ElementRef;

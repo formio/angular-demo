@@ -1,12 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { FormioAppConfig } from '@formio/angular';
+import { FormioAppConfig, FormioComponent } from '@formio/angular';
 import { PrismService } from '../../Prism.service';
 
 @Component({
     selector: 'app-wizard',
     templateUrl: './wizard.component.html',
     styleUrls: ['./wizard.component.scss'],
-    standalone: false
+    imports: [FormioComponent]
 })
 export class WizardComponent implements AfterViewInit {
   constructor(

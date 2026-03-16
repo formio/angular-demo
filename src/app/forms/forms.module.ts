@@ -14,28 +14,26 @@ import { FormsComponent } from './forms/forms.component';
 import { FORMS } from './forms.index';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormioModule,
-    RouterModule.forChild([{
-      path: '',
-      component: FormsComponent,
-      children: FORMS
-    }])
-  ],
-  declarations: [
-    CustomBuilderComponent,
-    BuilderComponent,
-    KitchenComponent,
-    LanguageComponent,
-    PdfComponent,
-    RendererComponent,
-    SimpleComponent,
-    WizardComponent,
-    FormsComponent
-  ],
-  bootstrap: [
-    FormsComponent
-  ]
+    imports: [
+        CommonModule,
+        FormioModule,
+        RouterModule.forChild([{
+                path: '',
+                component: FormsComponent,
+                children: FORMS
+            }]),
+        CustomBuilderComponent,
+        BuilderComponent,
+        KitchenComponent,
+        LanguageComponent,
+        PdfComponent,
+        RendererComponent,
+        SimpleComponent,
+        WizardComponent
+    ],
+    declarations: [FormsComponent],
+    bootstrap: [
+        FormsComponent
+    ]
 })
 export class FormsModule { }

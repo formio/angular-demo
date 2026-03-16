@@ -1,12 +1,12 @@
 import { Component, EventEmitter } from '@angular/core';
-import { AngularFormioOptions, FormioAppConfig } from '@formio/angular';
+import { AngularFormioOptions, FormioAppConfig, FormioComponent } from '@formio/angular';
 import { Webform } from "@formio/js";
 
 @Component({
     selector: 'app-language',
     templateUrl: './language.component.html',
     styleUrls: ['./language.component.scss'],
-    standalone: false
+    imports: [FormioComponent]
 })
 export class LanguageComponent {
   public language: EventEmitter<string>;

@@ -1,12 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { FormioAppConfig } from '@formio/angular';
+import { FormioAppConfig, FormioComponent } from '@formio/angular';
 import { PrismService } from '../../Prism.service';
 
 @Component({
     selector: 'app-simple',
     templateUrl: './simple.component.html',
     styleUrls: ['./simple.component.scss'],
-    standalone: false
+    imports: [FormioComponent]
 })
 export class SimpleComponent implements AfterViewInit {
   constructor(

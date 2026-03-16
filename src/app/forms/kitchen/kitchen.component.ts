@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FORM } from './form';
+import { FormioComponent } from '@formio/angular';
 @Component({
     selector: 'app-kitchen',
     templateUrl: './kitchen.component.html',
     styleUrls: ['./kitchen.component.scss'],
-    standalone: false
+    imports: [FormioComponent]
 })
 export class KitchenComponent {
   public form: any = FORM;

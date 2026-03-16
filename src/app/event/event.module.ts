@@ -15,58 +15,58 @@ import {
 } from '@formio/angular/resource';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormioModule,
-    FormioResource,
-    RouterModule.forChild([
+    imports: [
+        CommonModule,
+        FormioModule,
+        FormioResource,
+        RouterModule.forChild([
+            {
+                path: '',
+                component: FormioResourceIndexComponent
+            },
+            {
+                path: 'new',
+                component: FormioResourceCreateComponent
+            },
+            {
+                path: ':id',
+                component: ResourceComponent,
+                children: [
+                    {
+                        path: '',
+                        redirectTo: 'view',
+                        pathMatch: 'full'
+                    },
+                    {
+                        path: 'view',
+                        component: ViewComponent
+                    },
+                    {
+                        path: 'edit',
+                        component: FormioResourceEditComponent
+                    },
+                    {
+                        path: 'delete',
+                        component: FormioResourceDeleteComponent
+                    },
+                    {
+                        path: 'participant',
+                        loadChildren: () => import('./participant/participant.module').then(x => x.ParticipantModule)
+                    }
+                ]
+            }
+        ]),
+        ResourceComponent, ViewComponent
+    ],
+    providers: [
+        FormioResourceService,
         {
-            path: '',
-            component: FormioResourceIndexComponent
-        },
-        {
-            path: 'new',
-            component: FormioResourceCreateComponent
-        },
-        {
-            path: ':id',
-            component: ResourceComponent,
-            children: [
-                {
-                    path: '',
-                    redirectTo: 'view',
-                    pathMatch: 'full'
-                },
-                {
-                    path: 'view',
-                    component: ViewComponent
-                },
-                {
-                    path: 'edit',
-                    component: FormioResourceEditComponent
-                },
-                {
-                    path: 'delete',
-                    component: FormioResourceDeleteComponent
-                },
-                {
-                    path: 'participant',
-                    loadChildren: () => import('./participant/participant.module').then(x => x.ParticipantModule)
-                }
-            ]
+            provide: FormioResourceConfig,
+            useValue: {
+                name: 'event',
+                form: 'event'
+            }
         }
-    ])
-  ],
-  declarations: [ResourceComponent, ViewComponent],
-  providers: [
-      FormioResourceService,
-      {
-          provide: FormioResourceConfig,
-          useValue: {
-              name: 'event',
-              form: 'event'
-          }
-      }
-  ]
+    ]
 })
 export class EventModule { }
